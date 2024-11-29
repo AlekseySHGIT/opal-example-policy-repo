@@ -1,90 +1,118 @@
-{
-  "users": {
-    "alice": {
-      "roles": ["admin"],
-      "location": {
-        "country": "RUSSIA",
-        "ip": "8.8.8.8"
-      }
+[
+    {
+        "attrs": {},
+        "parents": [
+            {
+                "id": "admin",
+                "type": "Role"
+            }
+        ],
+        "uid": {
+            "id": "admin@blog.app",
+            "type": "User"
+        }
     },
-    "bob": {
-      "roles": ["employee", "billing"],
-      "location": {
-        "country": "RUSSIA",
-        "ip": "8.8.8.8"
-      }
+    {
+        "attrs": {},
+        "parents": [
+            {
+                "id": "writer",
+                "type": "Role"
+            }
+        ],
+        "uid": {
+            "id": "senior_writer@blog.app",
+            "type": "User"
+        }
     },
-     "sunil": {
-      "roles": ["guest"],
-      "location": {
-        "country": "US",
-        "ip": "8.8.8.8"
-      }
+    {
+        "attrs": {},
+        "parents": [
+            {
+                "id": "writer",
+                "type": "Role"
+            }
+        ],
+        "uid": {
+            "id": "writer@blog.app",
+            "type": "User"
+        }
     },
-    "eve": {
-      "roles": ["customer"],
-      "location": {
-        "country": "US",
-        "ip": "8.8.8.8"
-      }
+    {
+        "attrs": {},
+        "parents": [
+            {
+                "id": "user",
+                "type": "Role"
+            }
+        ],
+        "uid": {
+            "id": "user@blog.app",
+            "type": "User"
+        }
+    },
+    {
+        "attrs": {},
+        "parents": [],
+        "uid": {
+            "id": "article",
+            "type": "ResourceType"
+        }
+    },
+    {
+        "attrs": {},
+        "parents": [],
+        "uid": {
+            "id": "put",
+            "type": "Action"
+        }
+    },
+    {
+        "attrs": {},
+        "parents": [],
+        "uid": {
+            "id": "get",
+            "type": "Action"
+        }
+    },
+    {
+        "attrs": {},
+        "parents": [],
+        "uid": {
+            "id": "delete",
+            "type": "Action"
+        }
+    },
+    {
+        "attrs": {},
+        "parents": [],
+        "uid": {
+            "id": "post",
+            "type": "Action"
+        }
+    },
+    {
+        "attrs": {},
+        "parents": [],
+        "uid": {
+            "id": "article",
+            "type": "ResourceType"
+        }
+    },
+    {
+        "attrs": {},
+        "parents": [],
+        "uid": {
+            "id": "admin",
+            "type": "Role"
+        }
+    },
+    {
+        "attrs": {},
+        "parents": [],
+        "uid": {
+            "id": "writer",
+            "type": "Role"
+        }
     }
-  },
-  "role_permissions": {
-    "customer": [
-      {
-        "action": "read",
-        "type": "dog"
-      },
-      {
-        "action": "read",
-        "type": "cat"
-      },
-      {
-        "action": "adopt",
-        "type": "dog"
-      },
-      {
-        "action": "adopt",
-        "type": "cat"
-      }
-    ],
-    "employee": [
-      {
-        "action": "read",
-        "type": "dog"
-      },
-      {
-        "action": "read",
-        "type": "cat"
-      },
-      {
-        "action": "update",
-        "type": "dog"
-      },
-      {
-        "action": "update",
-        "type": "cat"
-      }
-    ],
-    "billing": [
-      {
-        "action": "read",
-        "type": "finance"
-      },
-      {
-        "action": "update",
-        "type": "finance"
-      }
-    ],
-    "guest": [
-     {
-       "action": "read",
-       "type": "cat"
-     },
-     {
-       "action": "read",
-       "type": "finance"
-     }
-    ]
-  }
-}
+]
